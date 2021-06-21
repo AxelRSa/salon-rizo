@@ -229,7 +229,9 @@ class galeria {
   if (this.galeriaStatus == 0) {
    this.galeriaStatus = 1;
    galeriaButton.innerHTML = "Contraer";
-   newGaleria.getPublications("src/api/?rest=" + sizePrincipalGallery);
+   newGaleria.getPublications(
+    "https://salonrizo.com/src/api/?rest=" + sizePrincipalGallery
+   );
   } else {
    imgLoader();
    this.galeriaStatus = 0;
@@ -273,11 +275,13 @@ function carouselRFunction(ele, object) {
 }
 
 //variables
-sizePrincipalGallery = 4;
+sizePrincipalGallery = 12;
 
 // init
 newGaleria = new galeria("");
-newGaleria.getPublications("src/api/?last=" + sizePrincipalGallery);
+newGaleria.getPublications(
+ "https://salonrizo.com/src/api/?last=" + sizePrincipalGallery
+);
 
 // listeners
 galeriaButton.onclick = function () {
