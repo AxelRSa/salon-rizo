@@ -1,0 +1,32 @@
+@import "./variables.scss";
+// section
+
+.section {
+ .sectionTitle {
+  > h3 {
+   font-family: $fnt-tt;
+   font-size: 3rem;
+   text-align: center;
+   padding: 1rem 0;
+   letter-spacing: 0.15rem;
+  }
+ }
+
+ .btnSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+
+  .btn {
+   padding: 0.8rem 1rem;
+   font-family: $fnt-txt-bold;
+   background-color: $clr-prin-200;
+   color: $clr-bas-0;
+   border-radius: 1rem;
+  }
+ }
+}
+
+//section

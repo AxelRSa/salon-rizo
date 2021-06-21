@@ -1,0 +1,36 @@
+// global
+* {
+ padding: 0;
+ margin: 0;
+}
+
+html {
+ scroll-behavior: smooth;
+ overflow-x: hidden;
+}
+
+a {
+ text-decoration: none;
+ color: white;
+}
+
+ul {
+ list-style: none;
+}
+
+// block scrolling when you're in the menu
+.stop-scrolling {
+ max-height: 100vh;
+ overflow-x: hidden;
+}
+// imports
+@import "sass/import";
+@import "sass/loader";
+@import "sass/arrowToTop";
+@import "sass/principal";
+@import "sass/section";
+@import "sass/servicios";
+@import "sass/galeria";
+@import "sass/footer";
+@import "sass/ubicacion";
+@import "sass/responsive";

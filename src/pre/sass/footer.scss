@@ -1,0 +1,32 @@
+@import "./variables.scss";
+// footer
+#footer {
+ background-color: $clr-bas-1000;
+ padding: 0.5rem;
+
+ .footerSocialMedia {
+  width: 100%;
+  display: flex;
+  color: $clr-bas-0;
+  justify-content: space-evenly;
+
+  > a {
+   > svg {
+    width: 2.5rem;
+   }
+  }
+ }
+ > a {
+  > h4 {
+   color: $clr-bas-0;
+   font-family: $fnt-txt-bold;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+   padding: 0.5rem 2rem 0.5rem 0;
+  }
+ }
+}
+
+// footer

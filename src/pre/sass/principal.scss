@@ -1,0 +1,275 @@
+@import "./variables.scss";
+// principal
+$top-align: 1rem;
+$btn-side: 3rem;
+
+#logo {
+ position: absolute;
+ left: 15px;
+ top: $top-align;
+ z-index: 10000;
+ color: $clr-bas-0;
+ > img {
+  height: 4rem;
+  width: 12rem;
+ }
+}
+
+// menu
+.menu {
+ position: absolute;
+ height: 100vh;
+ width: 100vw;
+
+ #menuIcon {
+  background-color: $clr-bas-0;
+  position: absolute;
+  right: 0.5rem;
+  top: $top-align;
+  border-radius: 5px;
+  width: 3em;
+  height: 3em;
+  transform: scale(0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+
+  .menuLine {
+   width: 2.2em;
+   height: 0.3em;
+   margin: 0.15em 0;
+   background-color: $clr-bas-1000;
+   border-radius: 2px;
+   transition: background-color 0.3s, transform 0.3s, opacity 0.3s, left 2s;
+  }
+
+  &.active {
+   background-color: $clr-bas-1000;
+
+   .menuLine:nth-child(1) {
+    background-color: $clr-bas-0;
+    transform: rotate(45deg) translateY(0.85rem);
+   }
+
+   .menuLine:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-1rem);
+   }
+
+   .menuLine:nth-child(3) {
+    background-color: $clr-bas-0;
+    transform: rotate(-45deg) translateY(-0.85rem);
+   }
+  }
+
+  &.inactive {
+   background-color: $clr-bas-0;
+
+   .menuLine {
+    background-color: $clr-bas-1000;
+   }
+  }
+ }
+
+ #menuDisplay {
+  background-color: $clr-bas-1000;
+  width: 100vw;
+  min-height: 100vh;
+  height: -webkit-fill-available;
+  visibility: hidden;
+  opacity: 0;
+  color: $clr-bas-0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 80px 0 10px 0;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1000;
+
+  &.active {
+   animation: menuAppear 0.3s forwards;
+  }
+
+  &.inactive {
+   animation: menuDisappear 0.3s forwards;
+  }
+
+  > li {
+   > a {
+    font-family: $fnt-tt;
+    font-size: 2rem;
+   }
+  }
+
+  > ul {
+   display: flex;
+   width: 100vw;
+   justify-content: space-evenly;
+
+   > li {
+    > a {
+     > svg {
+      height: 3.5rem;
+      width: 3.5rem;
+     }
+    }
+   }
+  }
+ }
+
+ > a {
+  position: absolute;
+  z-index: 100;
+  color: $clr-bas-0;
+
+  &:nth-child(2) {
+   top: 1rem;
+   right: 3.8rem;
+  }
+
+  &:nth-child(3) {
+   bottom: 0.2rem;
+   right: 1rem;
+  }
+
+  &:nth-child(4) {
+   left: 1rem;
+   bottom: 0.2rem;
+  }
+
+  > svg {
+   width: $btn-side;
+   height: $btn-side;
+  }
+ }
+
+ .menuArrow {
+  background-color: transparent;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  bottom: 0.5rem;
+  z-index: 100;
+
+  > a {
+   > svg {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    animation: arrowAnimation 0.7s infinite ease-out alternate;
+   }
+  }
+ }
+}
+
+.principal {
+ width: 100vw;
+ height: 100vh;
+ overflow: hidden;
+
+ > ul {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+   content: "";
+   width: 100%;
+   height: 100%;
+   background-color: rgba($clr-bas-1000, 0.6);
+   position: absolute;
+   top: 0;
+   left: 0;
+  }
+
+  > li {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   transition: opacity 1s;
+  }
+
+  @for $i from 1 to 4 {
+   > li:nth-child(#{$i}) {
+    background-image: url(./../img/slider#{$i}.png);
+   }
+  }
+ }
+
+ .principalText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $clr-bas-0;
+  flex-direction: column;
+  font-size: 2.5rem;
+  font-family: $fnt-txt;
+
+  > p {
+   &:nth-child(1) {
+    > span {
+     position: relative;
+     top: 1rem;
+     font-size: 7rem;
+    }
+   }
+
+   &:nth-child(2) {
+    > span {
+     color: $clr-prin-100;
+    }
+   }
+  }
+ }
+}
+
+@keyframes menuAppear {
+ 0% {
+  visibility: hidden;
+  opacity: 0;
+ }
+
+ 100% {
+  opacity: 1;
+  visibility: visible;
+ }
+}
+
+@keyframes menuDisappear {
+ 0% {
+  opacity: 1;
+  visibility: visible;
+ }
+
+ 100% {
+  visibility: hidden;
+  opacity: 0;
+ }
+}
+
+@keyframes arrowAnimation {
+ 0% {
+  top: 0;
+ }
+
+ 100% {
+  top: 1rem;
+ }
+}

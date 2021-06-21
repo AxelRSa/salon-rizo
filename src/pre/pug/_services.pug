@@ -1,0 +1,19 @@
+mixin service(id, title, alt, info, url)
+	li.serviciosLi
+		.serviciosService: b=title
+		.serviciosIcon: img(src=url,alt=alt loading="lazy")
+		//- info
+		.serviciosInfo
+			p=info 
+			.serviciosImg
+				img(src=url, alt="")
+
+mixin serviceSecondary(id, title, alt, info, url)
+	li.serviciosLi.secondary
+		.serviciosService: b=title
+		.serviciosIcon: img(src=url, alt=alt loading="lazy")
+		//- info
+		.serviciosInfo
+			p=info 
+			.serviciosImg
+				img(src=url, alt="")
