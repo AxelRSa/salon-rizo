@@ -1,0 +1,52 @@
+@import "variables";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $fnt-txt;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+// responsive media queries
+// xs <576px
+@media (min-width: $xs) {
+	html {
+		font-size: 16px;
+	}
+}
+
+// sm >576px
+@media (min-width: $sm) {
+	html {
+		font-size: 17px;
+	}
+}
+
+// md >768px
+@media (min-width: $md) {
+	html {
+		font-size: 18px;
+	}
+}
+
+// lg >992px
+@media (min-width: $lg) {
+	html {
+		font-size: 19px;
+	}
+}
+
+// xl >1200px
+@media (min-width: $xl) {
+	html {
+		font-size: 20px;
+	}
+}

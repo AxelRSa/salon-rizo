@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="sliderPoint" onclick="slider1()" id="point1" height="100" width="100" viewBox="0 0 200 200"><circle id="circle1" cx="100" cy="100" r="30" fill="#fff" style="r: 70;"></circle></svg>

@@ -1,0 +1,30 @@
+@import "../variables";
+
+.nav {
+	font-family: $fnt-tt;
+
+	&__social-media {
+		bottom: 1rem;
+		width: 100%;
+		padding: 0 1rem;
+
+		.social-media {
+			&__logo {
+				position: absolute;
+
+				&--instagram {
+					left: 1rem;
+				}
+
+				&--facebook {
+					right: 1rem;
+				}
+
+				&--whatsapp {
+					left: 50%;
+					transform: translate(-50%);
+				}
+			}
+		}
+	}
+}

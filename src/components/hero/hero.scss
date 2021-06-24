@@ -1,0 +1,145 @@
+@import "../variables.scss";
+
+.hero {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+
+	&__social-media {
+		position: absolute;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+
+		.social-media {
+			&__logo {
+				position: absolute;
+
+				&--whatsapp {
+					right: 4.5rem;
+					top: 1rem;
+				}
+
+				&--instagram {
+					left: 1rem;
+					bottom: 1rem;
+				}
+
+				&--facebook {
+					right: 1rem;
+					bottom: 1rem;
+				}
+			}
+		}
+
+		&.social-media--active {
+			.social-media {
+				&__logo {
+					z-index: 110;
+
+					&--whatsapp {
+						right: unset;
+						top: unset;
+						margin: 0 auto;
+						bottom: 1rem;
+						left: 50%;
+						transform: translate(-50%);
+					}
+				}
+			}
+		}
+	}
+
+	&__title-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		color: $clr-bas-0;
+		text-align: center;
+	}
+
+	&__first-letter {
+		color: $clr-prin-100;
+		font-size: 7rem;
+		position: relative;
+		top: 1rem;
+	}
+
+	&__hightlight {
+		color: $clr-prin-100;
+		display: block;
+	}
+
+	&__arrow-container {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translate(-50%);
+		animation: hero-arrow .7s infinite alternate;
+	}
+
+	&__arrow {
+		width: 10rem;
+		height: 10rem;
+	}
+}
+
+@keyframes hero-arrow {
+	0% {
+		bottom: 1rem;
+	}
+
+	100% {
+		bottom: .2rem;
+	}
+}
+
+@media (min-width: $md) {
+	.hero {
+		&__social-media {
+			.social-media {
+				&__logo {
+					&--whatsapp {
+						top: unset;
+						left: unset;
+						right: 2rem;
+						bottom: 1rem;
+					}
+
+					&--instagram {
+						top: unset;
+						left: unset;
+						right: 6rem;
+						bottom: 1rem;
+					}
+
+					&--facebook {
+						top: unset;
+						left: unset;
+						right: 10rem;
+						bottom: 1rem;
+					}
+				}
+			}
+		}
+
+		&__title {
+			font-size: 2.5rem;
+		}
+
+		&__arrow-container {
+			display: none;
+		}
+	}
+}

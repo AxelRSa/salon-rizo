@@ -41,7 +41,7 @@
      .serviciosService {
       justify-content: start;
 
-      > b {
+      > h2 {
        left: 1rem;
       }
      }
@@ -57,7 +57,7 @@
      .serviciosService {
       justify-content: flex-end;
 
-      > b {
+      > h2 {
        right: 1rem;
       }
      }
@@ -78,7 +78,7 @@
      color: $clr-bas-0;
      position: relative;
 
-     > b {
+     > h2 {
       position: relative;
       transition: left 0.5s, right 0.5s;
       font-size: 1.45rem;

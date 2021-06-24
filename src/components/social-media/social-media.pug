@@ -1,0 +1,10 @@
+include ../social-media-links
+
+mixin social-media(classes = "")
+	div(class=`social-media ${classes}`)
+		a.social-media__link(href=link.whatsapp target="_blank")
+			img.social-media__logo.social-media__logo--whatsapp(src="./media/img/svg-social-media-whatsapp.svg", alt="whasapp icon")
+		a.social-media__link(href=link.instagram target="_blank") 
+			img.social-media__logo.social-media__logo--instagram(src="./media/img/svg-social-media-instagram.svg", alt="instagram icon")
+		a.social-media__link(href=link.facebook target="_blank") 
+			img.social-media__logo.social-media__logo--facebook(src="./media/img/svg-social-media-facebook.svg", alt="facebook icon")

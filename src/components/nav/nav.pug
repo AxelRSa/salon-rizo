@@ -1,0 +1,32 @@
+include ../social-media/social-media
+-
+	const nav = [
+		{
+			name: "Servicios",
+			hash: "#servicios"
+		},	
+		{
+			name: "Galería",
+			hash: "#galeria"
+		},	
+		{
+			name: "Prodcutos",
+			hash: "#productos"
+		},	
+		{
+			name: "Ubicación",
+			hash: "#ubicación"
+		}
+	]
+
+mixin nav(clasess)
+	nav(class=`nav ${clasess}`)
+		.nav__menu-container
+			.nav__line
+			.nav__line
+			.nav__line
+		ul.nav__list
+			each item in (nav)
+				li.nav__item
+					a.nav__link(href=item.hash)=item.name
+			+social-media("nav__social-media")

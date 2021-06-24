@@ -203,7 +203,7 @@ $btn-side: 3rem;
 
   @for $i from 1 to 4 {
    > li:nth-child(#{$i}) {
-    background-image: url(./../img/slider#{$i}.png);
+    background-image: url(./../assets/img/slider#{$i}.png);
    }
   }
  }

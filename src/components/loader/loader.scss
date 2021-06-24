@@ -1,0 +1,64 @@
+@import "../variables";
+
+.loader {
+	width: 100vw;
+	height: 100vh;
+	background-color: $clr-bas-0;
+	z-index: 1000000;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--active {
+		animation: loader-close 1s forwards;
+	}
+
+	&__container {
+		width: 20rem;
+		height: 20rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__circle {
+		width: 15%;
+		height: 15%;
+		border-radius: 50%;
+		margin: 0 1rem;
+		animation: loader-circle 2s infinite alternate;
+
+		&--black {
+			background-color: $clr-bas-1000;
+		}
+
+		&--red {
+			background-color: $clr-prin-400;
+			animation-delay: .5s;
+		}
+
+		&--dark-red {
+			background-color: $clr-prin-200;
+			animation-delay: 1s;
+		}
+	}
+}
+
+@keyframes loader-circle {
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes loader-close {
+	100% {
+		visibility: hidden;
+		display: none;
+		opacity: 0;
+	}
+}

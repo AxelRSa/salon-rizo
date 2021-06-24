@@ -1,0 +1,16 @@
+include ../social-media/social-media
+include ../header/header
+include ../background-slider/background-slider
+
+mixin hero()
+	.hero
+		+header()
+		+social-media("hero__social-media")
+		+background-slider()
+		.hero__title-container
+			h2.hero__title
+				span.hero__first-letter +
+				span.hero__text de 30 años de 
+					span.hero__hightlight experiencia
+		.hero__arrow-container
+			img.hero__arrow(src="./media/img/svg-hero-arrow.svg", alt="")

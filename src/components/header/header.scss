@@ -1,0 +1,178 @@
+@import "../variables";
+
+.header {
+	&__logo {
+		position: absolute;
+		top: 1rem;
+		left: .5rem;
+		z-index: 110;
+
+		.logo {
+			&__img {
+				font-size: .9rem;
+			}
+		}
+	}
+
+	&__nav {
+		.nav {
+			&__menu-container {
+				z-index: 110;
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 3rem;
+				height: 3rem;
+				top: 1rem;
+				right: 1rem;
+				background-color: white;
+				border-radius: 5px;
+				top: 1rem;
+				right: 1rem;
+				cursor: pointer;
+			}
+
+			&__line {
+				background-color: black;
+				width: 70%;
+				height: .3rem;
+				border-radius: 5px;
+				margin: .15rem 0;
+			}
+
+			&__list {
+				z-index: 100;
+				position: absolute;
+				visibility: hidden;
+				opacity: 0;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				padding: 3rem 0 0 0;
+				display: flex;
+			}
+
+			&__link {
+				color: white;
+				font-size: 2.5rem;
+			}
+		}
+
+		&.nav--active {
+			.nav {
+				&__list {
+					animation: nav-active .5s forwards;
+
+				}
+			}
+		}
+
+		&.nav--inactive {
+			.nav {
+				&__list {
+					animation: nav-inactive .5s forwards;
+
+				}
+			}
+		}
+	}
+}
+
+@keyframes nav-active {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	100% {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes nav-inactive {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@media (min-width: $md) {
+	.header {
+		&__logo {
+			top: .5rem;
+			left: 2rem;
+			z-index: 110;
+
+			.logo {
+				&__img {
+					font-size: 1.1rem;
+				}
+			}
+		}
+
+		&__nav {
+			&.nav--active {
+				.nav {
+					&__list {
+						animation: unset;
+					}
+				}
+			}
+
+			&.nav--inactive {
+				.nav {
+					&__list {
+						animation: unset;
+					}
+				}
+			}
+
+			.nav {
+				&__menu-container {
+					display: none;
+				}
+
+				&__list {
+					opacity: 1;
+					visibility: visible;
+					background-color: unset;
+					flex-direction: row;
+					align-items: flex-start;
+					justify-content: flex-end;
+					width: 100%;
+					height: 4rem;
+					padding: 0 1rem;
+				}
+
+				&__item {
+					height: 100%;
+				}
+
+				&__link {
+					font-size: 1.8rem;
+					height: 100%;
+					width: 100%;
+					padding: 1.5rem 1rem;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+
+				&__social-media {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.background-slider {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba($clr-bas-1000, 0.6);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__slide {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+
+		@for $i from 1 through 3 {
+			&--#{$i} {
+				background-image: url("./media/img/background-slider#{$i}.png");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				transition: opacity 1s;
+			}
+		}
+
+		&--active {
+			opacity: 1;
+		}
+	}
+}

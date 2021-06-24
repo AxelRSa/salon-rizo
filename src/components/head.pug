@@ -1,0 +1,19 @@
+mixin head()
+	doctype html
+	html(lang="es")
+		head
+			meta(charset="UTF-8")
+			meta(http-equiv="X-UA-Compatible", content="IE=edge")
+			meta(name="viewport", content="width=device-width, initial-scale=1.0")
+			//- description
+			meta(name="description" content="Profesionales de la belleza con más 30 años de experiencia. Ofrecemos una amplia variedad de servicios para el cuidado del cabello. Si vives en Cancún ¡Ven y Conócenos!")
+			//- title
+			title Salón Rizo Cancún - Salón de belleza en Cancún
+			//- icon
+			link(id="pageIcon" rel="shortcut icon" href="media/img/pageIcon.png")
+			//- pre-load font
+			link(rel="preload" as="font" href="media/fonts/montserrat-regular/montserrat-v15-latin-regular.woff2" crossorigin)
+			link(rel="preload" as="font" href="media/fonts/montserrat-500/montserrat-v15-latin-500.woff2" crossorigin)
+			link(rel="preload" as="font" href="media/fonts/sanchez/sanchez-v8-latin-regular.woff2" crossorigin)
+		body(style="height:10000px;background-color:lightpink")
+			block 

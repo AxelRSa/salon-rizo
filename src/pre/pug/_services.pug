@@ -1,6 +1,6 @@
 mixin service(id, title, alt, info, url)
 	li.serviciosLi
-		.serviciosService: b=title
+		.serviciosService: h2=title
 		.serviciosIcon: img(src=url,alt=alt loading="lazy")
 		//- info
 		.serviciosInfo
@@ -10,7 +10,7 @@ mixin service(id, title, alt, info, url)
 
 mixin serviceSecondary(id, title, alt, info, url)
 	li.serviciosLi.secondary
-		.serviciosService: b=title
+		.serviciosService: h2=title
 		.serviciosIcon: img(src=url, alt=alt loading="lazy")
 		//- info
 		.serviciosInfo

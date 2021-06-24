@@ -1,0 +1,11 @@
+//- includes
+include ./components/head
+include ./components/loader/loader
+include ./components/arrow-top/arrow-top
+include ./components/hero/hero
+//- index.html
+//- erase height from body
++head() 
+	+loader()
+	+arrow-top()
+	+hero()
