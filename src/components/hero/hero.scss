@@ -7,7 +7,6 @@
 
 	&__social-media {
 		position: absolute;
-		z-index: 10;
 		width: 100%;
 		height: 100%;
 		top: 0;
@@ -15,6 +14,7 @@
 
 		.social-media {
 			&__logo {
+				z-index: 10;
 				position: absolute;
 
 				&--whatsapp {
@@ -87,6 +87,7 @@
 		left: 50%;
 		transform: translate(-50%);
 		animation: hero-arrow .7s infinite alternate;
+		z-index: 20;
 	}
 
 	&__arrow {

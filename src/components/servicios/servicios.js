@@ -38,6 +38,7 @@ servicios_finder();
 // button function to bring more services
 
 const button_services = document.querySelector(".servicios__button")
+let button_service_text = button_services.children[0]
 const servicios_content = document.querySelector(".servicios__content")
 let expanded_contracted = "contracted"
 
@@ -75,6 +76,7 @@ button_services.onclick = () => {
 	if (expanded_contracted == "contracted") {
 
 		expanded_contracted = "expanded"
+		button_service_text.textContent = "Contraer"
 
 		more_services.forEach(service => {
 
@@ -94,6 +96,7 @@ button_services.onclick = () => {
 
 			append_services.push(servicios_container)
 			servicios_content.appendChild(servicios_container)
+
 		});
 
 		servicios_finder()
@@ -101,6 +104,7 @@ button_services.onclick = () => {
 	} else {
 
 		expanded_contracted = "contracted"
+		button_service_text.textContent = "Más servicios"
 
 		append_services.forEach(service => {
 			service.remove()

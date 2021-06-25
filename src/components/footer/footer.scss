@@ -1,0 +1,58 @@
+@import "../variables.scss";
+
+.footer {
+	background-color: $clr-bas-1000;
+
+	&__social-media {
+		display: flex;
+		justify-content: space-evenly;
+		padding: .5rem 0 0 0;
+	}
+
+	&__phone-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: .5rem 0;
+		position: relative;
+		left: -1rem;
+	}
+
+	&__phone {
+		font-size: 1.1rem;
+		font-weight: bold;
+		padding: 0.8rem 1rem;
+		font-family: $fnt-txt-bold;
+		background-color: $clr-prin-200;
+		color: $clr-bas-0;
+		border-radius: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__phone-img {
+		width: 1.5rem;
+		height: 1.5rem;
+		position: relative;
+		left: .5rem;
+	}
+}
+
+@media (min-width: $xs) {
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem 0;
+
+		&__social-media {
+			width: 45%;
+			max-width: 20rem;
+		}
+
+		&__phone-container {
+			left: unset;
+			padding-right: 4rem;
+		}
+	}
+}

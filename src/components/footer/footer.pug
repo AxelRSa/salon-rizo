@@ -1,0 +1,8 @@
+include ../social-media/social-media
+
+mixin footer()
+	.footer 
+		+social-media("footer__social-media")
+		.footer__phone-container
+			a.footer__phone(href="tel:+529981723215") Da click para llamar
+				img.footer__phone-img(src="./media/img/svg-phone.svg", alt="")
