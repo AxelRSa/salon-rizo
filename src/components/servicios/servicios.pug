@@ -1,0 +1,50 @@
+include ../button/button
+
+-
+	const services = [
+		{
+			title: "Bótox capilar",
+			alt: "Foto de trabajo de bótox capilar",
+			information: "Es un tipo de tratamiento intensivo que hidrata y le da brillo al cabello, dejándolo más bonito, un poco más liso, sin frizz. Este producto ayuda a nutrir el cabello con proteínas y vitaminas haciendo que se hidrate y sea menos quebradizo.",
+			image: "./media/img/services-botox-capilar.jpg"
+		},
+		{
+			title: "Cirugía capilar",
+			alt: "Foto de trabajo de cirugía capilar",
+			information: "En el tratamiento de la cirugía capilar nos aplican sobre el cabello una serie de ácidos grasos que se extraen de la nuez moscada y que hidratan el cabello en profundidad.",
+			image: "./media/img/services-cirugia-capilar.jpg"
+		},
+		{
+			title: "Keratina",
+			alt: "Foto de trabajo de keratina",
+			information: "La keratina es una proteína que genera nuestro cuerpo. Sin embargo, al producir muy poca cantidad y tener una estructura muy resistente el cabello necesita más cantidad que podrás aportarle a través de los tratamientos de keratina, que ayudarán a reparar y nutrir tu cabello de raíz a las puntas.",
+			image: "./media/img/services-keratina.jpg"
+		},
+		{
+			title: "Alaciado japonés",
+			alt: "Foto de trabajo de alaciado japonés",
+			information: "El alisado japonés, alisado Yuko o alaciado japonés es un tratamiento de belleza capilar que consiste en estirar el cabello a través del uso de productos capilares, en conjunto con un abundante nivel de calor para cambiar la estructura capilar.",
+			image: "./media/img/services-alaciado-japones.jpg"
+		},
+		{
+			title: "Nanoplastia",
+			alt: "Foto de trabajo de nanoplastia",
+			information: "Reconstruye el cabello, quita el escrespamiento, hidrata y alisa de forma natural por un período de tiempo prolongado , y es progresivo pues, pasado el tiempo, el pelo volverá a su estado original de una forma progresiva y natural.",
+			image: "./media/img/services-nanoplastia.jpg"
+		}
+	] 
+
+mixin servicios(classes, title_class, button_container_class, button_class)
+	section#servicios(class=`servicios ${classes}`)
+		h2(class=`servicios__title ${title_class}`) Servicios
+		.servicios__content
+			each service in services
+				.servicios__container
+					.servicios__header
+						h2.servicios__service-title=service.title
+						img.servicios__icon(src=service.image, alt="")
+					.servicios__information 
+						p.servicios__description=service.information 
+						img.servicios__image(src=service.image, alt="")
+		+button("servicios__button")
+

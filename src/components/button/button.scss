@@ -1,0 +1,17 @@
+.button {
+	padding: 1rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__button {
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding: 0.8rem 1rem;
+		font-family: $fnt-txt-bold;
+		background-color: $clr-prin-200;
+		color: $clr-bas-0;
+		border-radius: 1rem;
+		border: none;
+	}
+}

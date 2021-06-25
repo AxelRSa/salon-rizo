@@ -1,0 +1,76 @@
+.servicios {
+	&__content {
+		padding: .5rem .2rem;
+	}
+
+	&__container:nth-child(2n) {
+		.servicios {
+			&__header {
+				background-color: $clr-prin-300;
+			}
+
+			&__service-title {
+				text-align: end;
+			}
+
+			&__icon {
+				border: solid .2rem $clr-prin-100;
+				left: 0;
+			}
+		}
+	}
+
+	&__container {
+		margin: 0;
+	}
+
+	&__header {
+		position: relative;
+		background-color: $clr-prin-100;
+		border-radius: 30px;
+		padding: 1rem;
+	}
+
+	&__service-title {
+		font-size: 1.45rem;
+		color: $clr-bas-0;
+		font-family: $fnt-txt-bold;
+		font-weight: bold;
+	}
+
+	&__icon {
+		position: absolute;
+		top: -.5rem;
+		right: 0;
+		width: 4.5rem;
+		height: 4.5rem;
+		border-radius: 50%;
+		border: solid .2rem $clr-prin-300;
+	}
+
+	&__information {
+		margin: 0 1rem 1rem 1rem;
+		background-color: #f7f7f7;
+		border-bottom-right-radius: 25px;
+		border-bottom-left-radius: 25px;
+		font-weight: 600;
+		line-height: 1.5;
+		transition: max-height 1s;
+		max-height: 0;
+		overflow-y: hidden;
+
+		&--active {
+			max-height: 800px;
+		}
+	}
+
+	&__description {
+		padding: .5rem;
+	}
+
+	&__image {
+		display: block;
+		margin: 1rem auto 1rem auto;
+		border-radius: 2rem;
+	}
+}
