@@ -1,7 +1,5 @@
 // arrow appear on screen when scroll become to 20px and on a click go up
 const arrow_top = document.querySelector(".arrow-top");
-const space_from_top_body = document.body.scrollTop;
-const space_from_top_doc = document.documentElement.scrollTop;
 const space_to_arrow = 20;
 
 window.onscroll = () => {

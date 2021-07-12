@@ -1,0 +1,38 @@
+.ubicacion {
+	&__address {
+		font-size: 1.5rem;
+		text-align: center;
+		font-weight: 900;
+	}
+
+	&__map {
+		padding: 1rem 0;
+		width: 100%;
+		height: 300px;
+	}
+
+	&__button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 0 1rem;
+
+	}
+
+	&__link {
+		font-size: 1.25rem;
+		font-weight: bold;
+		padding: 0.8rem 1rem;
+		font-family: $fnt-txt-bold;
+		background-color: $clr-prin-200;
+		color: $clr-bas-0;
+		border-radius: 1rem;
+		border: none;
+		cursor: pointer;
+		transition: transform .3s;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}

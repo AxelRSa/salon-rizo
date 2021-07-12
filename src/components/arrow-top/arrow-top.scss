@@ -10,8 +10,7 @@
 	z-index: 1000;
 	border-radius: 10%;
 	position: fixed;
-	transition: opacity 0.5s,
-		visibility 0.5s;
+	transition: opacity 0.5s, visibility 0.5s;
 	visibility: hidden;
 	opacity: 0;
 	display: flex;
@@ -19,6 +18,11 @@
 	align-items: center;
 	border: none;
 	cursor: pointer;
+	transition: transform .3s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 
 	&--active {
 		visibility: visible;

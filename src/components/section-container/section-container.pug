@@ -1,9 +1,11 @@
 include ../servicios/servicios
 include ../footer/footer
+include ../galeria/galeria
 include ../ubicacion/ubicacion
 
 mixin section-container()
 	.section-container 
-		+servicios("section-container__servicios","section-container__title","section-container__button-container","section-container__button")
-		+ubicacion()
+		+servicios("section-container__servicios","section-container__title")
+		+galeria("section-container__galeria","section-container__title")
+		+ubicacion("section-container__ubicacion","section-container__title")
 		+footer()

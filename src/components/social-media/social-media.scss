@@ -2,5 +2,11 @@
 	&__logo {
 		width: 3rem;
 		height: 3rem;
+		transition:	transform .3s;
+
+		&:hover {
+			filter: invert(28%) sepia(76%) saturate(7131%) hue-rotate(5deg) brightness(82%) contrast(127%);
+			transform: scale(1.05);
+		}
 	}
 }

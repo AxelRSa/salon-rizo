@@ -13,5 +13,11 @@
 		color: $clr-bas-0;
 		border-radius: 1rem;
 		border: none;
+		cursor: pointer;
+		transition: transform .3s;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 }

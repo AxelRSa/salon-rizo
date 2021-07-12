@@ -167,6 +167,12 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					transition: color .3s, transform .3s;
+
+					&:hover {
+						color: $clr-prin-100;
+						transform: scale(1.05);
+					}
 				}
 
 				&__social-media {

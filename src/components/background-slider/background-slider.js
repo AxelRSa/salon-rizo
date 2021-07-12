@@ -1,21 +1,21 @@
 // makes background slider animation
-const slides = document.querySelectorAll(".background-slider__slide")
+const background_slides = document.querySelectorAll(".background-slider__slide")
 let slide_turn = 0;
 
-slider = () => {
+background_slider = () => {
 
-	slides.forEach(slide => {
+	background_slides.forEach(slide => {
 		slide.classList.remove("background-slider__slide--active")
 	});
 
-	if (slide_turn > slides.length - 1) { slide_turn = 0 }
+	if (slide_turn > background_slides.length - 1) { slide_turn = 0 }
 
-	slides[slide_turn].classList.add("background-slider__slide--active")
+	background_slides[slide_turn].classList.add("background-slider__slide--active")
 
 	slide_turn++;
 
-	setTimeout(() => { slider() }, 5000);
+	setTimeout(() => { background_slider() }, 5000);
 }
 
 
-slider();
+background_slider();

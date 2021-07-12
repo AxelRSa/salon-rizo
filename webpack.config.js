@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const mode = process.env.NODE_ENV || "development";
 const path = require("path");
+console.log("********************************************************");
 
 module.exports = [
 	{
@@ -11,7 +12,7 @@ module.exports = [
 		target: mode == "production" ? "browserslist" : "web",
 		devServer: { contentBase: "./dist" },
 		output: {
-			filename: "./src/scrpits.js",
+			filename: mode === "production" ? "resource/script.[hash].js" : "resource/script.js",
 			path: path.resolve(__dirname, "dist"),
 			clean: mode === "production" ? true : false,
 		},
@@ -21,16 +22,14 @@ module.exports = [
 					test: /\.(jpe?g|png|gif|svg|webp)$/i,
 					type: "asset",
 					generator: {
-						filename: `src/media/images/[name]${mode === "production" ? "[hash]" : ""
-							}[ext]`,
+						filename: `resource/media/images/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
 					},
 				},
 				{
 					test: /\.(eot|svg|ttf|woff|woff2)$/i,
 					type: "asset",
 					generator: {
-						filename: `src/media/fonts/[name]${mode === "production" ? "[hash]" : ""
-							}[ext]`,
+						filename: `resource/media/fonts/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
 					},
 				},
 				{
@@ -56,13 +55,7 @@ module.exports = [
 				filename: "index.html",
 				inject: "body",
 			}),
-			// new HtmlWebpackPlugin({
-			//  template: "./src/pre/servicios.pug",
-			//  filename: "src/servicios.html",
-			//  publicPath: "",
-			//  inject: false,
-			// }),
-			new MiniCssExtractPlugin({ filename: "src/styles.css" }),
+			new MiniCssExtractPlugin({ filename: "resource/styles.[hash].css" }),
 		],
 	},
 ];

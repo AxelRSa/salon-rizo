@@ -22,6 +22,7 @@
 
 	&__container {
 		margin: 0;
+
 	}
 
 	&__header {
@@ -29,6 +30,12 @@
 		background-color: $clr-prin-100;
 		border-radius: 30px;
 		padding: 1rem;
+		cursor: pointer;
+		transition: transform .3s;
+
+		&:hover {
+			transform: scale(1.005);
+		}
 	}
 
 	&__service-title {

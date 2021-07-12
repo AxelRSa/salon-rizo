@@ -1,2 +1,11 @@
-mixin ubicacion()
-	
+include ../button/button
+include ../social-media-links
+
+mixin ubicacion(classes, tittle_class)
+	section#ubicacion(class=`ubicacion ${classes}`)
+		h2(class=`ubicacion__title ${tittle_class}`) Ubicación 
+		h3.ubicacion__address Av. La luna esq Ek-Balam 
+		iframe.ubicacion__map(src=link.iframe_map_link title="Salon Rizo's ubication, google maps" allowfullscreen="true" loading="lazy")
+		.ubicacion__button-container
+			a.ubicacion__link(href=link.map_link) Abrir en Google Maps
+
