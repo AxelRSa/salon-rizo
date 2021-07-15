@@ -10,7 +10,7 @@ module.exports = [
 		entry: "./src/index.js",
 		devtool: mode == "production" ? false : "source-map",
 		target: mode == "production" ? "browserslist" : "web",
-		devServer: { contentBase: "./dist" },
+		devServer: { contentBase: "./dist", hot: true },
 		output: {
 			filename: mode === "production" ? "resource/script.[hash].js" : "resource/script.js",
 			path: path.resolve(__dirname, "dist"),

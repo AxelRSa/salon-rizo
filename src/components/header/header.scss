@@ -157,21 +157,36 @@
 
 				&__item {
 					height: 100%;
+					padding: 0 1rem;
 				}
 
 				&__link {
 					font-size: 1.8rem;
 					height: 100%;
 					width: 100%;
-					padding: 1.5rem 1rem;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					transition: color .3s, transform .3s;
+					transition: color .3s;
+					position: relative;
+
+					&::after {
+						content: "";
+						height: 4px;
+						width: 0%;
+						position: absolute;
+						left: 0;
+						bottom: .6rem;
+						background-color: $clr-prin-100;
+						transition: width .3s;
+					}
 
 					&:hover {
 						color: $clr-prin-100;
-						transform: scale(1.05);
+
+						&::after {
+							width: 100%;
+						}
 					}
 				}
 

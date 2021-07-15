@@ -4,6 +4,7 @@
 	background-color: $clr-bas-1000;
 	position: relative;
 	overflow-x: hidden;
+	padding: 1rem 0;
 
 	&__title {
 		color: $clr-bas-0;
@@ -38,6 +39,12 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 10;
+		transition: transform .3s;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.2) translate(0, -50%);
+		}
 
 		&--right {
 			right: 0;
@@ -67,6 +74,13 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
+		transition: transform .3s;
+		color: #ffffff;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 
 	&__image {

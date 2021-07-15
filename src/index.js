@@ -1,4 +1,4 @@
-// index.html
+// index.html  
 import "./index.scss"  
 import "./components/loader/loader"
 import "./components/arrow-top/arrow-top"

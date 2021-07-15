@@ -18,7 +18,7 @@ let index_carousel = 0
 
 const initializator = async () => {
 
-	const response = await fetch(`https://salonrizo.com/src/api/`);
+	const response = await fetch(`https://salonrizo.com/resource/api/`);
 	const json = await response.json();
 	const slider_images_all = json.items;
 	modal_total_photos.innerHTML = slider_images_all.length

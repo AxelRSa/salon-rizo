@@ -15,10 +15,10 @@
 		justify-content: center;
 		padding: .5rem 0;
 		position: relative;
-		left: -1rem;
+		border-bottom: rgba($color: $clr-bas-0, $alpha: 0.3) solid 1px;
 	}
 
-	&__phone {
+	&__phone-button {
 		font-size: 1.1rem;
 		font-weight: bold;
 		padding: 0.8rem 1rem;
@@ -42,22 +42,66 @@
 		position: relative;
 		left: .5rem;
 	}
+
+	&__post-footer {
+		height: 6rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 0 0 2rem;
+	}
+
+	&__section {
+		color: $clr-bas-0;
+		margin: .2rem 0;
+	}
+
+	&__link {
+		color: $clr-prin-100;
+	}
+
+
 }
 
-@media (min-width: $xs) {
+@media (min-width: $sm) {
 	.footer {
 		display: flex;
-		justify-content: space-between;
-		padding: 1rem 0;
+		padding: 1rem 0 0 0;
+		flex-wrap: wrap;
 
 		&__social-media {
-			width: 45%;
-			max-width: 20rem;
+			width: 50%;
+			padding: 0;
+			justify-content: start;
+			padding: 0 0 1rem 1rem;
+			border-bottom: rgba($color: $clr-bas-0, $alpha: 0.3) solid 1px;
+
+			.social-media {
+				&__link {
+					padding: 0 1rem;
+				}
+			}
+		}
+
+		&__post-footer {
+			height: unset;
 		}
 
 		&__phone-container {
 			left: unset;
-			padding-right: 4rem;
+			padding: unset;
+			width: 50%;
+			border-bottom: unset;
+			justify-content: start;
+			border-bottom: rgba($color: $clr-bas-0, $alpha: 0.3) solid 1px;
+			padding: 0 0 1rem 0;
+		}
+
+		&__post-footer {
+			padding: .5rem 0;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
 		}
 	}
 }

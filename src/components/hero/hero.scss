@@ -18,8 +18,8 @@
 				position: absolute;
 
 				&--whatsapp {
-					right: 4.5rem;
-					top: 1rem;
+					left: 1rem;
+					bottom: 8rem;
 				}
 
 				&--instagram {
@@ -28,8 +28,8 @@
 				}
 
 				&--facebook {
-					right: 1rem;
-					bottom: 1rem;
+					left: 1rem;
+					bottom: 4.5rem;
 				}
 			}
 		}
@@ -114,21 +114,21 @@
 					&--whatsapp {
 						top: unset;
 						left: unset;
-						right: 2rem;
+						left: 2rem;
 						bottom: 1rem;
 					}
 
 					&--instagram {
 						top: unset;
 						left: unset;
-						right: 6rem;
+						left: 6rem;
 						bottom: 1rem;
 					}
 
 					&--facebook {
 						top: unset;
 						left: unset;
-						right: 10rem;
+						left: 10rem;
 						bottom: 1rem;
 					}
 				}
