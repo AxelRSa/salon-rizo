@@ -1,5 +1,5 @@
 // index.html  
-import "./index.scss"  
+import "./index.scss"
 import "./components/loader/loader"
 import "./components/arrow-top/arrow-top"
 import "./components/nav/nav"
