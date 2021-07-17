@@ -5,7 +5,7 @@
 		position: absolute;
 		top: 1rem;
 		left: .5rem;
-		z-index: 110;
+		z-index: 2147483646;
 
 		.logo {
 			&__img {
@@ -17,7 +17,7 @@
 	&__nav {
 		.nav {
 			&__menu-container {
-				z-index: 110;
+				z-index: 2147483646;
 				position: absolute;
 				display: flex;
 				flex-direction: column;
@@ -29,8 +29,6 @@
 				right: 1rem;
 				background-color: white;
 				border-radius: 5px;
-				top: 1rem;
-				right: 1rem;
 				cursor: pointer;
 			}
 
@@ -43,7 +41,7 @@
 			}
 
 			&__list {
-				z-index: 100;
+				z-index: 2147483645;
 				position: absolute;
 				visibility: hidden;
 				opacity: 0;
