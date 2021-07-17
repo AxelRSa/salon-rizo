@@ -95,7 +95,6 @@
 	visibility: hidden;
 	opacity: 0;
 	position: fixed;
-	z-index: 1000;
 	width: 100vw;
 	height: 100vh;
 	min-height: 550px;
@@ -104,6 +103,7 @@
 	background-color: black;
 	justify-content: center;
 	align-items: center;
+	z-index: 2147483647;
 
 	&--active {
 		animation: modal_animation_active .3s forwards;
