@@ -10,6 +10,10 @@
 		color: $clr-bas-0;
 	}
 
+	&__content {
+		position: relative;
+	}
+
 	&__container {
 		position: relative;
 		width: 100000px;
@@ -25,14 +29,13 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	&__arrow {
-		position: absolute;
-		top: 50%;
-		transform: translate(0, -50%);
-		background-color: #0008;
+		background-color: rgba($color: $clr-prin-200, $alpha: .9);
 		padding: .5rem;
 		border-radius: 50%;
 		display: flex;
@@ -41,9 +44,11 @@
 		z-index: 10;
 		transition: transform .3s;
 		cursor: pointer;
+		box-shadow: rgb(0 0 0 / 15%) 0px 4px 12px 0px;
+		margin: 0 .2rem;
 
 		&:hover {
-			transform: scale(1.2) translate(0, -50%);
+			transform: scale(1.2);
 		}
 
 		&--right {
@@ -75,185 +80,23 @@
 		justify-content: center;
 		align-items: center;
 		cursor: pointer;
-		transition: transform .3s;
-		color: #ffffff;
 
-		&:hover {
-			transform: scale(1.05);
-		}
+		color: #ffffff;
+		overflow: hidden;
+		border-radius: .2rem;
+
 	}
 
 	&__image {
 		object-fit: cover;
 		width: 100%;
 		height: 100%;
-		border-radius: .2rem;
-	}
-}
+		transition: transform .3s;
 
-.modal {
-	visibility: hidden;
-	opacity: 0;
-	position: fixed;
-	width: 100vw;
-	height: 100vh;
-	min-height: 550px;
-	top: 0;
-	left: 0;
-	background-color: black;
-	justify-content: center;
-	align-items: center;
-	z-index: 2147483647;
-
-	&--active {
-		animation: modal_animation_active .3s forwards;
-	}
-
-	&--inactive {
-		animation:
-			modal_animation_inactive .3s forwards;
-	}
-
-	&__logo {
-		position: absolute;
-		top: .5rem;
-		left: .5rem;
-		font-size: .7rem;
-	}
-
-	&__close {
-		position: absolute;
-		top: 1rem;
-		right: .5rem;
-		width: 2rem;
-		height: 2rem;
-	}
-
-	&__content-container {
-		width: 90%;
-		height: auto;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-		margin: 0 auto;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
-	}
-
-	&__dot-container {
-		position: absolute;
-		display: flex;
-		top: .1rem;
-		left: 50%;
-		transform: translateX(-50%);
-		background-color: #00000055;
-		border-radius: 1rem;
-		padding: 0 .3rem;
-	}
-
-	&__dot {
-		width: 1rem;
-		transition: transform .3s, opacity .3s;
-		opacity: .5;
-
-		&--active {
-			transform: scale(1.3);
-			opacity: 1;
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
-
-	&__carousel-arrow {
-		background-color: #00000055;
-		position: absolute;
-		width: 1.5rem;
-		top: 50%;
-		transform: translateY(-50%);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 50%;
-		z-index: 15;
-
-		&--right {
-			right: 0;
-		}
-	}
-
-	&__carousel-arrow-svg {
-		&--right {
-			transform: rotate(180deg);
-		}
-	}
-
-	&__publication {
-		width: 100%;
-		height: auto;
-		// max-height: 400px;
-		// object-fit: cover;
-		border-radius: 1rem;
-		// object-fit: scale-down;
-	}
-
-	&__arrow {
-		position: absolute;
-		width: 50px;
-		bottom: 4rem;
-
-
-		&--right {
-			right: 0;
-		}
-
-		&--left {
-			transform: rotate(180deg);
-		}
-	}
-
-	&__counter {
-		position: absolute;
-		color: #ffffff;
-		bottom: 4rem;
-		left: 50%;
-		transform: translate(-50%);
-		font-size: 2.5rem;
-	}
-
-	&__link {
-		position: absolute;
-		bottom: 1rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	&__instagram {
-		width: 2rem;
-		height: 2rem;
-	}
-}
-
-@keyframes modal_animation_active {
-	0% {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	100% {
-		visibility: visible;
-		opacity: 1;
-	}
-}
-
-@keyframes modal_animation_inactive {
-	0% {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	100% {
-		visibility: hidden;
-		opacity: 0;
-	}
-
 }
 
 @media (min-width: $xs) {

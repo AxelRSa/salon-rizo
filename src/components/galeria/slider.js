@@ -22,7 +22,7 @@ export const responsive_size_slider = () => {
 
 export const pack_creator = (api_data, pack_size) => {
 
-	// how many times is going to repeat the for cycle
+	// how many times is going to repeat the "for" cycle
 	let repeat_for_cycle = Math.ceil(api_data.length / pack_size);
 	let index_data = 0
 	let slider_images_packs = []
@@ -75,13 +75,13 @@ export const render_images = (publications, pack) => {
 		image_container.innerHTML = `
 		<img class="galeria__image" src="${image.img}" alt="${image.caption}">
 		`
-		image_container.onclick = () => { render_modal(publications, image) }
+		image_container.onclick = () => render_modal(publications, image)
 		pack_container.appendChild(image_container)
 
 	});
 
 	slider.appendChild(pack_container)
-	// container height 
+	// galeria__image-container height to make squares
 	let image_containers = document.querySelectorAll(".galeria__image-container")
 	image_containers.forEach(image => {
 		image.style.height = `${image.offsetWidth}px`

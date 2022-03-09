@@ -1,33 +1,14 @@
-include ../button/button
-include ../logo/logo
+include ../modal/modal
 
 mixin galeria(classes, title_class)
 	section#galeria(class=`galeria ${classes}`)
 		h2(class=`galeria__title ${title_class}`) Galería
-		.galeria__controls
-			.galeria__arrow.galeria__arrow--left
-				img.galeria__arrow-img.galeria__arrow-img--left(src="./media/img/svg-gallery-slider-arrow.svg", alt="slider arrow left")
-			.galeria__arrow.galeria__arrow--right
-				img.galeria__arrow-img.galeria__arrow-img--right(src="./media/img/svg-gallery-slider-arrow.svg", alt="slider arrow right")
-		.galeria__container(style="left:0px;")
-		.modal
-			+logo("modal__logo")
-			img.modal__close(src="./media/img/svg-close.svg", alt="")
-			.modal__content-container 
-				.modal__dot-container 
-					img.modal__dot.modal__dot--active(src="./media/img/svg-dot-carousel.svg", alt="")
-					img.modal__dot(src="./media/img/svg-dot-carousel.svg", alt="")
-					img.modal__dot(src="./media/img/svg-dot-carousel.svg", alt="")
-				.modal__carousel-arrow.modal__carousel-arrow--left
-					img.modal__carousel-arrow-svg(src="./media/img/svg-carousel-arrow.svg", alt="")
-				.modal__carousel-arrow.modal__carousel-arrow--right
-					img.modal__carousel-arrow-svg.modal__carousel-arrow-svg--right(src="./media/img/svg-carousel-arrow.svg", alt="")
-				.modal__content
-			img.modal__arrow.modal__arrow--left(src="./media/img/svg-modal-arrow.svg", alt="")
-			img.modal__arrow.modal__arrow--right(src="./media/img/svg-modal-arrow.svg", alt="")
-			p.modal__counter 
-				span.modal__currently-photo 1 
-				|/
-				span.modal__total-photos
-			a.modal__link(href="")
-				img.modal__instagram(src="./media/img/svg-modal-instagram.svg", alt="")
+		.galeria__content
+			.galeria__controls
+				.galeria__arrow.galeria__arrow--left
+					img.galeria__arrow-img.galeria__arrow-img--left(src="./media/img/svg-gallery-slider-arrow.svg", alt="slider arrow left")
+				.galeria__arrow.galeria__arrow--right
+					img.galeria__arrow-img.galeria__arrow-img--right(src="./media/img/svg-gallery-slider-arrow.svg", alt="slider arrow right")
+			.galeria__container(style="left:0px;")
+			+modal()
+			

@@ -1,0 +1,166 @@
+@import "../variables.scss";
+
+.modal {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	max-height: 100vh;
+	max-width: 100vw;
+	min-height: 550px;
+	top: 0;
+	left: 0;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 91000;
+
+	&--active {
+		animation: modal_animation_active .3s forwards;
+	}
+
+	&--inactive {
+		animation: modal_animation_inactive .3s forwards;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 4rem;
+		width: 100%;
+		padding: 0 1rem;
+		margin: .5rem auto;
+	}
+
+	&__logo {
+		font-size: .7rem;
+	}
+
+	&__close {
+		width: 2rem;
+		height: 2rem;
+		cursor: pointer;
+	}
+
+	&__content-container {
+		width: 90%;
+		margin: auto;
+		flex-grow: 1;
+	}
+
+	&__content {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__publication {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__carousel-controls {
+		height: 3rem;
+		width: 90%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: .5rem auto;
+	}
+
+	&__dot-container {
+		display: flex;
+	}
+
+	&__dot {
+		width: 1rem;
+		transition: transform .3s, opacity .3s;
+		opacity: .5;
+
+		&--active {
+			transform: scale(1.3);
+			opacity: 1;
+		}
+	}
+
+	&__carousel-arrow {
+		width: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	&__carousel-arrow-svg {
+		&--right {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 90%;
+		margin: .5rem auto;
+	}
+
+	&__arrow {
+		width: 50px;
+
+		&--right {}
+
+		&--left {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__counter {
+		color: #ffffff;
+		font-size: 2.5rem;
+	}
+
+	&__link {
+		margin: .5rem auto;
+		background-color: $clr-prin-200;
+		padding: .5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+	}
+
+	&__instagram {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+@keyframes modal_animation_active {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes modal_animation_inactive {
+	0% {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	100% {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+}

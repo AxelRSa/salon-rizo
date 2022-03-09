@@ -5,24 +5,21 @@ const body = document.querySelector("body");
 const nav_links = document.querySelectorAll(".nav__link")
 const medium_media_query = 992;
 
-menu_icon.onclick = () => { close() };
+menu_icon.onclick = () => menu_function();
 
-nav_links.forEach(e => {
-	e.onclick = () => { close() };
-});
+nav_links.forEach(link => link.onclick = () => menu_function());
 
-function close() {
+function menu_function() {
 
-	let screen_width = screen.width;
+	if (window.innerWidth <= medium_media_query) {
 
-	if (screen_width < medium_media_query) {
-		
 		if (!nav.classList.contains("nav--active")) {
 
 			nav.classList.add("nav--active")
 			nav.classList.remove("nav--inactive")
 			body.style.maxHeight = "100vh"
 			body.style.width = "100vw"
+			body.style.overflow = "hidden"
 
 		} else {
 
@@ -30,7 +27,8 @@ function close() {
 			nav.classList.add("nav--inactive")
 			body.style.maxHeight = ""
 			body.style.width = ""
-
+			body.style.overflow = ""
+			
 		}
 	}
 }

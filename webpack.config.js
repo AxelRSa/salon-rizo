@@ -12,7 +12,7 @@ module.exports = [
 		target: mode == "production" ? "browserslist" : "web",
 		devServer: { contentBase: "./dist", hot: true },
 		output: {
-			filename: mode === "production" ? "resource/script.[hash].js" : "resource/script.js",
+			filename: mode === "production" ? "frontend/script.[hash].js" : "frontend/script.js",
 			path: path.resolve(__dirname, "dist"),
 			clean: mode === "production" ? true : false,
 		},
@@ -22,14 +22,14 @@ module.exports = [
 					test: /\.(jpe?g|png|gif|svg|webp)$/i,
 					type: "asset",
 					generator: {
-						filename: `resource/media/images/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
+						filename: `frontend/media/images/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
 					},
 				},
 				{
 					test: /\.(eot|svg|ttf|woff|woff2)$/i,
 					type: "asset",
 					generator: {
-						filename: `resource/media/fonts/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
+						filename: `frontend/media/fonts/[name]${mode === "production" ? "[hash]" : ""}[ext]`,
 					},
 				},
 				{
@@ -55,7 +55,7 @@ module.exports = [
 				filename: "index.html",
 				inject: "body",
 			}),
-			new MiniCssExtractPlugin({ filename: "resource/styles.[hash].css" }),
+			new MiniCssExtractPlugin({ filename: "frontend/styles.[hash].css" }),
 		],
 	},
 ];

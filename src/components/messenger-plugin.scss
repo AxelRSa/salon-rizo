@@ -1,0 +1,15 @@
+.fb_dialog {
+	z-index: 60000 !important;
+}
+
+.fb_customer_chat_icon {
+	z-index: 60000 !important;
+}
+
+iframe[data-testid="unread_iframe"] {
+	z-index: 61000 !important;
+}
+
+.fb_mpn_mobile_landing_page_slide_up {
+	z-index: 70000 !important;
+}

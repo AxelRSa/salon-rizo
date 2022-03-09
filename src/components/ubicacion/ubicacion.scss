@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 .ubicacion {
 	&__address {
 		font-size: 1.5rem;
@@ -34,6 +36,14 @@
 		&:hover {
 			transform: scale(1.05);
 			box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.49);
+		}
+	}
+}
+
+@media (min-width: $md) {
+	.ubicacion {
+		&__map {
+			height: 500px;
 		}
 	}
 }

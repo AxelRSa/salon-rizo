@@ -1,0 +1,24 @@
+include ../logo/logo
+
+mixin modal()
+	.modal
+		.modal__header
+			+logo("modal__logo")
+			img.modal__close(src="./media/img/svg-close.svg", alt="")
+		.modal__content-container 
+			.modal__content
+		.modal__carousel-controls
+			.modal__carousel-arrow.modal__carousel-arrow--left
+				img.modal__carousel-arrow-svg(src="./media/img/svg-carousel-arrow.svg", alt="")
+			.modal__dot-container
+			.modal__carousel-arrow.modal__carousel-arrow--right
+				img.modal__carousel-arrow-svg.modal__carousel-arrow-svg--right(src="./media/img/svg-carousel-arrow.svg", alt="")
+		.modal__controls
+			img.modal__arrow.modal__arrow--left(src="./media/img/svg-modal-arrow.svg", alt="")
+			p.modal__counter 
+				span.modal__currently-photo 1 
+				|/
+				span.modal__total-photos
+			img.modal__arrow.modal__arrow--right(src="./media/img/svg-modal-arrow.svg", alt="")
+		a.modal__link(href="")
+			img.modal__instagram(src="./media/img/svg-modal-instagram.svg", alt="")

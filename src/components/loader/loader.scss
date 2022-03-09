@@ -4,7 +4,7 @@
 	width: 100vw;
 	height: 100vh;
 	background-color: $clr-bas-0;
-	z-index: 2147483647;
+	z-index: 100000;
 	position: fixed;
 	display: flex;
 	align-items: center;
@@ -13,6 +13,12 @@
 	&--active {
 		animation: loader-close 1s forwards;
 	}
+
+	// &__header-cover {
+	// 	position: absolute;
+	// 	top: 0;
+	// 	background-color: rosybrown;
+	// }
 
 	&__container {
 		width: 20rem;
